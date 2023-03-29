@@ -1,30 +1,30 @@
 <script>
-import Component1 from './components/Component1.vue';
+import AppMain from "./components/AppMain.vue";
 import { store } from "./store.js";
 
 export default {
     name: "App",
     components: {
-      Component1,
+        AppMain,
     },
     data() {
-          return {
-             store, 
-          }
-      },
-    methods:{
-        
+        return {
+            store,
+        };
     },
+    methods: {},
 };
 </script>
 
-
 <template>
-  <!-- placeholder -->
-  <Component1/> 
-  <!-- placeholder -->
-</template>
+    <Header class="p-5 container text-center"> Ciao Header </Header>
 
+    <Main class="p-5 container">
+        <AppMain />
+    </Main>
+
+    <Footer class="p-5 container text-center"> Ciao Footer </Footer>
+</template>
 
 <style lang="scss">
 @use "./styles/main";
