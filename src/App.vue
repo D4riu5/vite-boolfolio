@@ -1,11 +1,16 @@
 <script>
-import AppMain from "./components/AppMain.vue";
+// components
+import AppHeader from "./components/AppHeader.vue";
+import AppFooter from "./components/AppFooter.vue";
+
+// Helpers
 import { store } from "./store.js";
 
 export default {
     name: "App",
     components: {
-        AppMain,
+        AppHeader,
+        AppFooter,
     },
     data() {
         return {
@@ -17,13 +22,13 @@ export default {
 </script>
 
 <template>
-    <Header class="p-5 container text-center"> Ciao Header </Header>
+    <AppHeader />
 
     <Main class="p-5 container">
-        <AppMain />
+        <router-view></router-view>
     </Main>
 
-    <Footer class="p-5 container text-center"> Ciao Footer </Footer>
+    <AppFooter />
 </template>
 
 <style lang="scss">

@@ -1,11 +1,11 @@
 <script>
 import { store } from "../store.js";
-import ProjectCards from "./Main/ProjectCards.vue";
+import ProjectCards from "../components/Partials/ProjectCards.vue"
 
 import axios from "axios";
 
 export default {
-    name: "AppMain",
+    name: "ProjectsIndex",
     components: {
         ProjectCards,
     },
@@ -23,8 +23,8 @@ export default {
         <div class="col-12">
             <h1 class="my-4">My projects</h1>
         </div>
-        <ProjectCards />
     </div>
+    <ProjectCards />
 </template>
 
 <style lang="scss" scoped>
